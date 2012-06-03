@@ -1,0 +1,7 @@
+vim/vim/bundle/badwolf = [hg]https://bitbucket.org/sjl/badwolf
+vim/vim/bundle/Command-T = [git]git://github.com/wincent/Command-T.git
+vim/vim/bundle/splice.vim = [hg]https://bitbucket.org/sjl/splice.vim
+vim/vim/bundle/supertab = [git]git://github.com/ervandew/supertab.git
+vim/vim/bundle/syntastic = [git]git://github.com/scrooloose/syntastic.git
+vim/vim/bundle/VimClojure = [git]git://github.com/vim-scripts/VimClojure.git
+vim/vim/bundle/vim-powerline = [git]git://github.com/Lokaltog/vim-powerline.git

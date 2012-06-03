@@ -1,0 +1,169 @@
+set nocompatible
+
+" Strip whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
+
+" Pathogen Initialization
+" =======================
+
+call pathogen#infect()
+call pathogen#helptags()
+
+" General Config
+" ==============
+
+let mapleader = ","
+let maplocalleader = "\\"
+set encoding=utf-8
+set laststatus=2
+set backspace=indent,eol,start
+set history=1000
+set ruler
+set showcmd
+set mouse=a
+set mousehide
+set scrolloff=8
+set wildmenu
+set wildmode=longest,list
+set wildignorecase
+set ttyfast
+set list
+set listchars=tab:▸\ ,eol:¬,extends:❯,precedes:❮
+set splitbelow
+set splitright
+
+" Indentation and Display
+" =======================
+
+filetype plugin indent on
+set autoindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set colorcolumn=+1
+set wrap
+
+" Dictionary
+" ==========
+
+set dictionary+=/usr/share/dict/american-english
+set dictionary+=/usr/share/dict/brazilian
+set dictionary+=/usr/share/dict/portuguese
+
+" Wildmenu completion
+" ===================
+
+set wildmenu
+set wildmode=list:longest
+
+set wildignore+=.hg,.git,.svn                    " Version control
+set wildignore+=*.aux,*.out,*.toc                " LaTeX intermediate files
+set wildignore+=*.jpg,*.bmp,*.gif,*.png,*.jpeg   " binary images
+set wildignore+=*.o,*.obj,*.exe,*.dll,*.manifest " compiled object files
+set wildignore+=*.spl                            " compiled spelling word lists
+set wildignore+=*.sw?                            " Vim swap files
+
+set wildignore+=*.pyc                            " Python byte code
+
+set wildignore+=assets,bin,gen,proguard          " Android/Eclipe
+set wildignore+=.metadata,*.jar
+
+" Syntax
+" ======
+
+if !has('gui_running')
+    set term=xterm
+    set t_Co=256
+endif
+syntax on
+colorscheme molokai
+
+" Backups
+" =======
+
+set undodir=~/.tmp/vim/undo//     " undo files
+set backupdir=~/.tmp/vim/backup// " backups
+set directory=~/.tmp/vim/swap//   " swap files
+set backup                        " enable backups
+
+" Searching and movement
+" ======================
+
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+set showmatch
+
+" Unhighlight searched words
+map <silent> <leader><space> :nohlsearch<cr>
+
+" Keep search matches in the middle of the window.
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" Easier to type, and I never use the default behavior.
+noremap H ^
+noremap L $
+
+" Navigation
+" ==========
+
+noremap j gj
+noremap k gk
+noremap <C-h> <C-W>h
+noremap <C-j> <C-W>j
+noremap <C-k> <C-W>k
+noremap <C-l> <C-W>l
+
+noremap <leader>s <C-W>s
+noremap <leader>v <C-w>v
+nnoremap <leader><leader> <C-^>
+
+" from https://github.com/eiro/rcfiles
+" (consider set hidden)
+noremap <down> :blast<cr>
+noremap <right> :bnext<cr>
+noremap <left> :bprevious<cr>
+noremap <up> :ls<cr>:buffer
+
+" Copy & Pasting
+" ==============
+
+vnoremap <C-C> "+y
+vnoremap <C-X> "+x
+noremap <S-Insert> "+gP
+inoremap <ESC><S-Insert> "+gP
+
+" Spelling
+" ========
+
+nnoremap <leader>cse :set spell spelllang=en<CR>
+nnoremap <leader>csp :set spell spelllang=pt<CR>
+nnoremap <leader>noc :set nospell<CR>
+
+" Command-t
+" =========
+
+map <leader>f :CommandTFlush<cr>\|:CommandT<cr>
+map <leader>F :CommandTFlush<cr>\|:CommandT %%<cr>
+
+" Syntastic
+" =========
+
+let g:syntastic_mode_map = { 'mode': 'active',
+            \ 'active_filetypes': [],
+            \ 'passive_filetypes': ['java'] }
+
+let g:syntastic_check_on_open = 1
+
+" Random stuff
+" ===================
+
+" Panic Button
+nnoremap <f9> mzggg?G`z
+
+" JSON formating
+nnoremap <leader>j !!python -mjson.tool<cr>
+nnoremap <leader>J :%!python -mjson.tool<cr>
+vnoremap <leader>j :!python -mjson.tool<cr>
