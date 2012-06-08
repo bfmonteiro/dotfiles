@@ -1,0 +1,16 @@
+" No toolbar
+set guioptions-=T
+
+" No scrollbars
+set guioptions-=l
+set guioptions-=L
+set guioptions-=r
+set guioptions-=b
+set guioptions-=B
+
+set guifont=Monaco\ 9
+
+nnoremap ,cd :cd %:p:h<CR>
+
+" https://groups.google.com/d/topic/vim_use/2TcvvH63YlE/discussion
+cab sh !gnome-terminal
