@@ -1,0 +1,14 @@
+[user]
+	name = Bruno França
+	email = bfmonteiro@gmail.com
+[color]
+	status = auto
+	branch = auto
+	diff = auto
+[core]
+	editor = vim
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	l = log --all --graph
