@@ -1,8 +1,5 @@
 set nocompatible
 
-" Strip whitespace on save
-autocmd BufWritePre * :%s/\s\+$//e
-
 " Pathogen Initialization
 " =======================
 
@@ -171,3 +168,6 @@ nnoremap <f9> mzggg?G`z
 nnoremap <leader>j !!python -mjson.tool<cr>
 nnoremap <leader>J :%!python -mjson.tool<cr>
 vnoremap <leader>j :!python -mjson.tool<cr>
+
+" Strip whitespace
+nnoremap <F8> :%s/\s\+$//e<cr>
