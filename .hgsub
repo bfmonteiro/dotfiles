@@ -1,4 +1,5 @@
 vim/vim/bundle/badwolf = [hg]https://bitbucket.org/sjl/badwolf
+vim/vim/bundle/clam.vim = [hg]https://bitbucket.org/sjl/clam.vim
 vim/vim/bundle/Command-T = [git]git://github.com/wincent/Command-T.git
 vim/vim/bundle/splice.vim = [hg]https://bitbucket.org/sjl/splice.vim
 vim/vim/bundle/supertab = [git]git://github.com/ervandew/supertab.git

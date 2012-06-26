@@ -1,6 +1,7 @@
 67e39768ea3a0a01eabcb511e47530558a4534de vim/vim/bundle/Command-T
 d4497538ae397efdb0f684b3d3278e4c6ec8effd vim/vim/bundle/VimClojure
 383c5a5e05232def8540aab9342527adc01fcfb8 vim/vim/bundle/badwolf
+ed67c4908fa033eef6cdfacc8141750e99f1345b vim/vim/bundle/clam.vim
 3a2ab096c039516a8f43e6acd0264d8a81cd0544 vim/vim/bundle/splice.vim
 6e1d7c39a8e9545b6f2d44dfff81a5d77efad6c8 vim/vim/bundle/supertab
 ec9bf2e983463445b15e1df20c2d774e9bf7361b vim/vim/bundle/syntastic
