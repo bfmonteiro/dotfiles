@@ -115,6 +115,7 @@ noremap <C-l> <C-W>l
 
 noremap <leader>s <C-W>s
 noremap <leader>v <C-w>v
+noremap <leader>t :tabnew<cr>
 nnoremap <leader><leader> <C-^>
 
 " from https://github.com/eiro/rcfiles
